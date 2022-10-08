@@ -6,13 +6,17 @@ s1 = 2
 s2 = 3
 s3 = 13
 s4 = 14
+s5 = 0
+s6 = 1
 
 @pytest.mark.parametrize(
     'num, prime', [
         (s1, True), 
         (s2, True), 
         (s3, True), 
-        (s4, False)
+        (s4, False),
+        (s5, False),
+        (s6, False)
     ]
 )
 def test_is_prime(num, prime):
@@ -24,7 +28,9 @@ def test_is_prime(num, prime):
         (s1, [2]), 
         (s2, [2, 3]), 
         (s3, [2, 3, 5, 7, 11, 13]), 
-        (s4, [2, 3, 5, 7, 11, 13])
+        (s4, [2, 3, 5, 7, 11, 13]), 
+        (s5, []), 
+        (s6, [])
     ]
 )
 def test_sieve_of_eratosthenes(num, prime):

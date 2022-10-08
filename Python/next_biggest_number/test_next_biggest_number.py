@@ -1,5 +1,5 @@
 import pytest
-from next_biggest_number import nextBiggestNumber
+from next_biggest_number.next_biggest_number import nextBiggestNumber
 
 # Test cases
 s1 = 245
